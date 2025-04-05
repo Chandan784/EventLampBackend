@@ -7,6 +7,8 @@ import authRoutes from "./routes/authRoutes.js";
 import AvailabilityRoutes from "./routes/availabilityRoutes.js";
 import bookingRoutes from "./routes/bookingRoutes.js";
 import uploadRoutes from "./routes/uploadRoutes.js";
+import venueCategoryRoutes from "./routes/venueCategoryRoutes.js";
+import sliderRoutes from "./routes/sliderRoutes.js";
 import path from "path";
 import { fileURLToPath } from "url";
 
@@ -36,6 +38,8 @@ app.use("/api/venues", venueRoutes); // Venue routes
 app.use("/api/v1/auth", authRoutes); // Authentication routes
 app.use("/api/availability", AvailabilityRoutes); // Availability routes
 app.use("/api/bookings", bookingRoutes); // Booking routes
+app.use("/api/v1/venueCategory", venueCategoryRoutes);
+app.use("/api/v1/slider", sliderRoutes);
 
 // Default route
 app.get("/", (req, res) => {

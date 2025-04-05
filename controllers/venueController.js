@@ -100,7 +100,7 @@ export const updateVenue = async (req, res) => {
 
     // Ensure `images` is an array of valid URLs
     const validImageUrls = images.map((image) => {
-      if (!image.startsWith("http://localhost:5000/uploads/")) {
+      if (!image.startsWith("http://api.eventlamp.com/uploads/")) {
         throw new Error("Invalid image URL format");
       }
       return image;

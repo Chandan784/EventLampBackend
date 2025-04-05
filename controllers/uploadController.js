@@ -11,7 +11,7 @@ export const uploadFile = async (req, res) => {
     const uploadedFiles = await Promise.all(
       req.files.map(async (file) => {
         // Construct the URL for the uploaded file
-        const fileUrl = `http://localhost:5000/uploads/${file.filename}`;
+        const fileUrl = `https://api.eventlamp.com/uploads/${file.filename}`;
 
         // Save the file metadata in the database
         const newFile = new File({
